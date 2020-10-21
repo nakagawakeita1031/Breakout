@@ -109,7 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25778c0360ee8bc4ea01bdbfac9ceb45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: 0
   masterObj: {fileID: 0}
+  initHp: 2
+  hitSE: {fileID: 8300000, guid: c8acf5e28cf62304188f092c22554af9, type: 3}
+  DestroySE: {fileID: 8300000, guid: c8acf5e28cf62304188f092c22554af9, type: 3}
+  rend: {fileID: 4753291043969020176}
 --- !u!114 &886039853115065304
 MonoBehaviour:
   m_ObjectHideFlags: 0

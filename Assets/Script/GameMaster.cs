@@ -25,7 +25,7 @@ public class GameMaster : MonoBehaviour
         {
             if (boxNum <= 0)
             {
-                StageClear(nowTime.ToString("F0") + "秒でクリアできた！", true);
+                StageClear(nowTime.ToString("F0") + "秒でクリアできた！");
                 isClear = true;
             }
         }
@@ -38,9 +38,10 @@ public class GameMaster : MonoBehaviour
         FindObjectOfType<LevelManager>().LevelUP();
     }
 
-    public void GameOver(string resultMessage)
+    public void GameOver(string resultMessage, bool isClear)
     {
         DataSender.resultMessage = resultMessage;
+        DataSender.isGameClear = isClear;
         SceneManager.LoadScene("Result");
     }
 }

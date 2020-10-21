@@ -6,9 +6,10 @@ public class HitPlaySound : MonoBehaviour
 {
     public AudioClip sound;
 
-    private void OnCollisionEnter(Collision collision)
+     void OnCollisionEnter(Collision collision)
     {
         AudioSource.PlayClipAtPoint(sound, transform.position);
+        Debug.Log("SE");
     }
     // Start is called before the first frame update
     void Start()

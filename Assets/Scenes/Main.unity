@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310446087}
   - component: {fileID: 310446086}
+  - component: {fileID: 310446088}
   m_Layer: 0
   m_Name: Master
   m_TagString: Untagged
@@ -367,6 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxNum: 40
   nowTime: 0
+  resultMessageText: {fileID: 0}
 --- !u!4 &310446087
 Transform:
   m_ObjectHideFlags: 0
@@ -381,6 +383,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &310446088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310446085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5043948581ff0b746aeca29a810ababf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockColors:
+  - {r: 0.19272874, g: 0.2357498, b: 0.5754717, a: 0}
+  - {r: 0.6226415, g: 0.20265219, b: 0.20265219, a: 0}
 --- !u!1 &334614036
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fff2d0722a1a5408831d5beaeef0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxObjPrefab: {fileID: 5663927294596032865, guid: dcbfec647ac997e41ba2bd09d79b0b15, type: 3}
+  boxObjPrefabs:
+  - {fileID: 5663927294596032865, guid: dcbfec647ac997e41ba2bd09d79b0b15, type: 3}
+  - {fileID: 7707270360260995071, guid: c8b4272ed2fb4944daabbc97fdb80be4, type: 3}
   boxesObj: {fileID: 273843485}
 --- !u!1 &866052977
 GameObject:
@@ -1702,6 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 303ad6b717a49124badf074f5f56c67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addSpeed: 0
 --- !u!54 &1595197118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1945,7 +1965,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066047495}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e6ec999bca26e64e97a862078ee9c4e, type: 3}
