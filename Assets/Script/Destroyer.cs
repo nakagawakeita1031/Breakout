@@ -39,7 +39,7 @@ public class Destroyer : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(DestroySE, transform.position);
             masterObj.GetComponent<GameMaster>().boxNum--;
-            //FindObjectOfType<Score>().AddPoint(point);
+            FindObjectOfType<Score>().AddPoint(point);
             Destroy(this.gameObject);
         }
         else
