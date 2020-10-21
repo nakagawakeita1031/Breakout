@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class SceneSelecter : MonoBehaviour
 {
-    private string sceneName;
+    public enum SceneType
+    {
+        Title,
+        Main,
+        Result
+    }
+
+    private SceneType sceneType;
 
     // Start is called before the first frame update
     void Start()
     {
-        sceneName = SceneManager.GetActiveScene().name;
+        sceneType = (SceneType)Enum.Parse(typeof(SceneType), SceneManager.GetActiveScene().name);
     }
 
     // Update is called once per frame
@@ -18,13 +26,13 @@ public class SceneSelecter : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            switch(sceneName)
+            switch(sceneType)
             {
-                case "Title":
-                    SceneManager.LoadScene("Main");
+                case SceneType.Title:
+                    SceneManager.LoadScene(SceneType.Main.ToString());
                     break;
-                case "Result":
-                    SceneManager.LoadScene("Title");
+                case SceneType.Result:
+                    SceneManager.LoadScene(SceneType.Title.ToString());
                     break;
                 default:
                     break;
