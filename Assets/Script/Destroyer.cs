@@ -45,10 +45,11 @@ public class Destroyer : MonoBehaviour
         else
         {
             AudioSource.PlayClipAtPoint(hitSE, transform.position);
-            //ChangeBlockColor();
+            ChangeBlockColor();
         }
-       
-     
-        
+    }
+    private void ChangeBlockColor()
+    {
+        rend.material.color = changeColorOnHit.ChangeMaterialColor(currentHp);
     }
 }

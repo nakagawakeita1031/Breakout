@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
     {
         if (!LevelManager.isStart)
         {
-            
+            Initialize();
         }
     }
     // Start is called before the first frame update
@@ -56,7 +56,7 @@ public class Score : MonoBehaviour
     {
         PlayerPrefs.SetInt(highScoreKey, highScore);
         PlayerPrefs.Save();
-        Initialize();
+        Debug.Log(highScore);
     }
 
     // Update is called once per frame

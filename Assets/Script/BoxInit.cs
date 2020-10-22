@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class BoxInit : MonoBehaviour
 {
+    [Header("Boxの種類数")]
     public GameObject [] boxObjPrefabs;
     public GameObject boxesObj;
+
+    [Header("Boxの行と列の設定値")]
+    public int row;
+    public int column;
 
      void Awake()
     {
         GameObject masterObj = GameObject.Find("Master");
-     for (int x = 0; x < 8; x++)
+     for (int x = 0; x < row; x++)
         {
-            for (int y = 0; y < 5; y++)
+            for (int y = 0; y < column; y++)
             {
                 int randomValue = Random.Range(0, boxObjPrefabs.Length);
                 GameObject g = Instantiate(boxObjPrefabs[randomValue], boxesObj.transform);

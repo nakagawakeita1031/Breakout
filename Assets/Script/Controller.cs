@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+    public float playerSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +17,11 @@ public class Controller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += transform.forward * 0.1f;
+            transform.position += transform.forward * playerSpeed;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position -= transform.forward * 0.1f;
+            transform.position -= transform.forward * playerSpeed;
         }
     }
 }

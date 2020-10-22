@@ -10,7 +10,7 @@ public class StartShot : MonoBehaviour
     void Start()
     {
         transform.eulerAngles = new Vector3(0, Random.Range(30, 120), 0);
-        gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 500);
+        gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * (500 + (LevelManager.level * addSpeed)));
     }
 
     // Update is called once per frame
