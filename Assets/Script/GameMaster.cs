@@ -44,6 +44,7 @@ public class GameMaster : MonoBehaviour
     void StageClear(string resultMessage)
     {
         score.Save();
+        DataSender.resultMessage = resultMessage;
         resultMessageText.text = resultMessage;
         FindObjectOfType<LevelManager>().LevelUP();
     }

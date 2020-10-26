@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+    [Header("Playerの移動速度")]
     public float playerSpeed;
+
+    [Header("Playerの移動範囲の制限値")]
+    public float limitPos = 4.25f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +27,8 @@ public class Controller : MonoBehaviour
         {
             transform.position -= transform.forward * playerSpeed;
         }
+        float z = Mathf.Clamp(transform.position.z, -4.25f, 4.25f);
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, z);
     }
 }
