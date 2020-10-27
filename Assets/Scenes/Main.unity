@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 0.01
+  limitPos: 4.25
 --- !u!65 &69626181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -280,8 +281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8, y: 115.2}
-  m_SizeDelta: {x: 760.8214, y: 120.50372}
+  m_AnchoredPosition: {x: -0.8, y: -21}
+  m_SizeDelta: {x: 400.95227, y: 120.50372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237268767
 MonoBehaviour:
@@ -305,10 +306,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 67
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 0
     m_MaxSize: 67
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -429,7 +430,6 @@ GameObject:
   - component: {fileID: 310446088}
   - component: {fileID: 310446089}
   - component: {fileID: 310446090}
-  - component: {fileID: 310446091}
   m_Layer: 0
   m_Name: Master
   m_TagString: Untagged
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5c6d800e26dad47aa2ee492c6aad63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxNum: 40
+  boxNum: 2
   nowTime: 0
   resultMessageText: {fileID: 237268767}
   score: {fileID: 310446089}
@@ -509,19 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelText: {fileID: 1475153951}
-  startShot: {fileID: 0}
---- !u!114 &310446091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310446085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6a0ef1cb5fc5a468e8043ce9a58c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  startShot: {fileID: 1595197117}
 --- !u!1 &334614036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +992,7 @@ Transform:
   - {fileID: 1956174666}
   - {fileID: 467647963}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &755560784
 MonoBehaviour:
@@ -1023,7 +1011,7 @@ MonoBehaviour:
   - {fileID: 7707270360260995071, guid: c8b4272ed2fb4944daabbc97fdb80be4, type: 3}
   boxesObj: {fileID: 273843485}
   row: 8
-  column: 1
+  column: 5
 --- !u!1 &844776418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,7 +1806,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1595197117
 MonoBehaviour:

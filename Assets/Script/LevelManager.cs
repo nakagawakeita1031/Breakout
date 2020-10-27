@@ -21,10 +21,12 @@ public class LevelManager : MonoBehaviour
             isStart = true;
         }
         levelText.text = level.ToString();
+        Debug.Log("レベル,"+ level);
     }
 
     public void LevelUP()
     {
+        Debug.Log("レベルアップ");
         startShot.BallDestroy();
         level++;
         StartCoroutine("NextLevel");

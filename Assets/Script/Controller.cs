@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
         {
             transform.position -= transform.forward * playerSpeed;
         }
-        float z = Mathf.Clamp(transform.position.z, -4.25f, 4.25f);
+        float z = Mathf.Clamp(transform.position.z, -limitPos, limitPos);
 
         transform.position = new Vector3(transform.position.x, transform.position.y, z);
     }

@@ -39,11 +39,14 @@ public class SceneSelecter : MonoBehaviour
 
             }
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+            UnityEditor.EditorApplication.isPlaying = false;
 #else
             Application.Quit();
 #endif
+        }
+
     }
 }
